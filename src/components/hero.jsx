@@ -9,7 +9,9 @@ const Hero = () => {
   return (
     <div className=" relative">
       <Carousel images={[carouseImg1, carouseImg2, carouseImg3]} />
-      <RequestForm />
+      <div className="invisible_form">  
+        <RequestForm />
+      </div>
     </div>
   )
 }

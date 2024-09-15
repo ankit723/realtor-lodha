@@ -1,8 +1,8 @@
 import React from 'react'
 
-const RequestForm = () => {
+const ModalRequestForm = ({closeModal}) => {
     return (
-        <div className="form-container text-left pt-5 absolute right-0 top-0" style={{ paddingTop: "20px", display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', height: 'auto' }}>
+        <div className="form-container text-left pt-5 fixed left-[50rem] top-60" style={{ paddingTop: "20px", display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', height: 'auto', zIndex:100}}>
             <form className="w-full max-w-lg">
                 <h1 className='text-center text-2xl font-normal text-black'>REQUEST A CALL BACK</h1>
                 <label>
@@ -13,15 +13,12 @@ const RequestForm = () => {
                 </label>
                 <label>
                     <select name="country" className="block w-full border p-2 mb-4">
-                        <option value="India">Configuration</option>
-                        <option value="India">1 BHK</option>
-                        <option value="India">2 BHK</option>
+                        <option value="India">India</option>
                     </select>
                 </label>
                 <label>
                     <select name="state" className="block w-full border p-2 mb-4">
-                        <option value="Mumbai">Mumbai, Kalyan, Dombivali</option>
-                        <option value="Mumbai">Navi Mumbai</option>
+                        <option value="Mumbai">Mumbai</option>
                     </select>
                 </label>
                 <label className='mb-10'>
@@ -40,11 +37,13 @@ const RequestForm = () => {
                 </label>
                 <div className="flex items-center gap-1">
                     <button type="submit" className="bg-blue-500 text-white px-4 py-2">Submit</button>
-                    <p className='font-bold m-0 p-0'>Call: +918433606213</p>
+                    <p className='font-bold m-0 p-0'>Call: 022-50030139</p>
                 </div>
             </form>
+
+            <div className="absolute text-2xl text-left right-3 top-1 cursor-pointer" onClick={()=>closeModal(false)}>&times;</div>
         </div>
     )
 }
 
-export default RequestForm
+export default ModalRequestForm

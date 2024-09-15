@@ -12,6 +12,7 @@ const Header = () => {
           src="https://s3.ap-south-1.amazonaws.com/lodhagroup.in-tfz/Codename-Goldendream/Crown_Taloja_Logo_without_tagline.svg"
           alt="Logo"
         />
+        <p className='font'>Marketing Partners</p>
       </a>
 
       <div className="right-side">

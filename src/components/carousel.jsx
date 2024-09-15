@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Carousel = ({ images }) => {
+const Carousel = ({ images, sx }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrevious = () => {
@@ -20,7 +20,7 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className="relative w-[85%] h-[600px] overflow-hidden">
+    <div className="relative w-[85%] h-[600px] overflow-hidden" style={sx}>
       <div
         className="w-full h-full bg-cover bg-center transition-transform duration-300"
         style={{ backgroundImage: `url(${images[currentIndex]})` }}

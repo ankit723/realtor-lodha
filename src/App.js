@@ -10,9 +10,12 @@ import LifeAtCrown from './components/lifeAtCrown';
 import Amenties from './components/amenties';
 import About from './components/about';
 import Services from './components/services';
+import RequestForm from './components/requestForm';
+import ModalRequestForm from './components/modalRequestform';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [showModal, setShowModal]=useState(true)
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 2000);
@@ -26,23 +29,55 @@ function App() {
           <div className="loader" />
         </div>
       ) : (
-        <div className="App">
-          <Header />
-          <Navbar />
-          <div className="">
-            <Hero />
-          </div>
+        <>
+          {
+            !showModal?(
+              <div className="App">
+                <Header />
+                <Navbar />
+                <div className="">
+                  <Hero />
+                </div>
 
-          <main>
-            <About />
-            <Amenties />
-            <Price />
-            <LifeAtCrown />
-            <Accordian />
-            <Services />
-          </main>
-          <Footer />
-        </div>
+                <main>
+                  <About />
+                  <Amenties />
+                  <Price />
+                  <LifeAtCrown />
+                  <Accordian />
+                  <Services />
+                </main>
+                <Footer />
+              </div>
+          ):(
+              <>
+                <div className="App" style={{overflowY:"hidden"}}>
+                  <Header />
+                  <Navbar />
+                  <div className="">
+                    <Hero />
+                  </div>
+
+                  <main>
+                    <About />
+                    <Amenties />
+                    <Price />
+                    <LifeAtCrown />
+                    <Accordian />
+                    <Services />
+                  </main>
+                  <Footer />
+                </div>
+
+                <div className='fixed top-0 left-0 w-screen h-screen bg-[rgba(0,0,0,0.5)] z-10'></div>
+
+                <div className='fixed inset-0 flex items-center justify-center z-20'>
+                  <ModalRequestForm closeModal={() => setShowModal(false)} />
+                </div>
+              </>
+          )
+          }
+        </>
 
       )}
     </div>

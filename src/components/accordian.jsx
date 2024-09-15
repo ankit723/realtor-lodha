@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import qr from '../135x135_QR_Crown_Taloja_Tulip_P51700051956 (1).jpg'
 
 const Accordian = () => {
   const [activeSection, setActiveSection] = useState(null);
@@ -25,6 +26,8 @@ const Accordian = () => {
           <b>Site Office:</b> Crown Taloja, Taloja Bypass road | <b>Corporate office:</b>
           Lodha Excelus, N.M. Joshi Marg. Mahalaxmi. Mumbai- 400011
         </p>
+
+        <img src={qr} alt="" />
       </div>
 
       <div className="section-header disclaimer-info">
