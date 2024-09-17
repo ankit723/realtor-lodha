@@ -499,6 +499,12 @@ h1.amenities{
   .grid-container {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .plans-box-container{
+    margin-top: 30rem;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .grid-item {
