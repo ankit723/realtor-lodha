@@ -55,7 +55,7 @@ const Carousel = ({ images, sx }) => {
 
       {/* Right Arrow */}
       <div
-        className="absolute top-1/2 right-5 transform -translate-y-1/2 p-2 rounded-full bg-black bg-opacity-30 text-white z-1"
+        className="absolute top-1/2 right-5 transform -translate-y-1/2 p-2 rounded-full bg-black bg-opacity-30 text-white cursor-pointer z-1"
         onClick={goToNext}
       >
         &#10095;
