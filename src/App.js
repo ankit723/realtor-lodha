@@ -34,7 +34,6 @@ function App() {
             !showModal?(
               <div className="App">
                 <Header />
-                <Navbar />
                 <div className="">
                   <Hero />
                 </div>
@@ -53,7 +52,6 @@ function App() {
               <>
                 <div className="App" style={{overflowY:"hidden"}}>
                   <Header />
-                  <Navbar />
                   <div className="">
                     <Hero />
                   </div>

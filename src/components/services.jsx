@@ -1,4 +1,6 @@
 import React from 'react'
+import Carousel from './carousel';
+import CarouselProvider from './carouselProvider';
 
 const Services = () => {
   const services = [
@@ -9,6 +11,14 @@ const Services = () => {
     { name: "Facility management", img: "https://www.lodhagroup.in/themes/basic/images/svg/service-icons/service-management.svg" },
     { name: "NRI services", img: "https://www.lodhagroup.in/themes/basic/images/svg/service-icons/services-nriservices.svg" },
   ];
+
+  const children = services.map((service, index) => (
+    <div key={index} className="py-10">
+      <img src={service.img} alt={service.name} />
+      <p>{service.name}</p>
+    </div>
+  ));
+
   return (
     <div className='service-class'>
       <div className="image-title-wrapper">
@@ -30,21 +40,10 @@ const Services = () => {
 
       </div>
 
-      <div className="grid-container">
-        {services.map((service, index) => (
-          <div key={index} className="grid-item">
-            <button className="grid-button">
-              <div className="image-above">
-                <img src={service.img} alt={service.name} />
-                <p>{service.name}</p>
-              </div>
-              <div className="image-below">
-                <img src={service.img} alt={service.name} />
-                <p>{service.name}</p>
-              </div>
-            </button>
-          </div>
-        ))}
+      <div className="">
+      <CarouselProvider className={"w-full h-full flex justify-center items-center"}>
+        {children}
+      </CarouselProvider>
       </div>
     </div>
   )

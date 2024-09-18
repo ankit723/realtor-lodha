@@ -51,10 +51,10 @@ a{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px 15px;
   background-color: #ffffff;
   transition: ease-out 0.5s;
   border-bottom: 0.2px solid rgba(0, 0, 0, 0.315);
+  padding: 0.5rem 2rem;
 }
 
 .menu {

@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import qr from '../135x135_QR_Crown_Taloja_Tulip_P51700051956 (1).jpg'
 
 const Accordian = () => {
-  const [activeSection, setActiveSection] = useState(null);
+  const [activeSection, setActiveSection] = useState('rera');
 
   const toggleSection = (section) => {
+    console.log(section)
     setActiveSection(activeSection === section ? null : section);
   };
   return (

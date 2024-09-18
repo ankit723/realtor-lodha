@@ -75,7 +75,9 @@ const RequestForm = () => {
                         value={formData.state}
                         onChange={handleChange}
                     >
-                        <option value="Mumbai">Mumbai, Kalyan, Dombivali</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kalyan">Kalyan</option>
+                        <option value="Dombivali">Dombivali</option>
                         <option value="Navi Mumbai">Navi Mumbai</option>
                     </select>
                 </label>
