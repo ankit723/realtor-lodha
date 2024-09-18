@@ -68,7 +68,7 @@ const Carousel = ({ images, sx }) => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`cursor-pointer rounded-full w-3 h-3 ${
-              index === currentIndex ? 'bg-white' : 'bg-gray-400'
+              index === currentIndex ? 'bg-white' : 'bg-gray-400 '
             }`}
           ></div>
         ))}
